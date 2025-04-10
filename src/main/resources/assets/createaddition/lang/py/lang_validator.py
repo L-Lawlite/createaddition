@@ -1,8 +1,8 @@
 import json
 import os
 
-dir_actual = os.path.dirname(__file__)
-dir_lang = os.path.join(dir_actual, "../")
+dir = os.path.dirname(__file__)
+dir_lang = os.path.join(dir, "../")
 
 truth = "en_us.json"
 
