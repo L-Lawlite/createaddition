@@ -36,8 +36,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.ticks.TickPriority;
 
-import javax.annotation.Nullable;
-
 import java.util.Random;
 
 public class EnergyMeterBlock extends Block implements IBE<EnergyMeterTileEntity>, IWrenchable, ITransformableBlock {
@@ -205,14 +203,15 @@ public class EnergyMeterBlock extends Block implements IBE<EnergyMeterTileEntity
 	}
 	
 	@Override
-	public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
-		super.playerDestroy(level, player, pos, state, blockEntity, tool);
+	public BlockState playerWillDestroy(Level worldIn, BlockPos pos, BlockState state, Player player) {
+		super.playerWillDestroy(worldIn, pos, state, player);
 
-		if (level.isClientSide()) return;
-		BlockEntity te = level.getBlockEntity(pos);
-		if (te == null) return;
-		if (!(te instanceof IWireNode cte)) return;
-		cte.dropWires(level, !player.isCreative());
+		if (worldIn.isClientSide()) return state;
+		BlockEntity te = worldIn.getBlockEntity(pos);
+		if (te == null) return state;
+		if (!(te instanceof IWireNode cte)) return state;
+		cte.dropWires(worldIn, !player.isCreative());
+		return state;
 	}
 	
 	@Override
