@@ -110,12 +110,12 @@
 	"item.createaddition.gold_goblet.tooltip": "CÁLIZ_DE_ORO",
 	"item.createaddition.gold_goblet.tooltip.summary": "Beber de este _cáliz_ satisfará más que cualquier botella normal.",
 
-	"item.createaddition.seed_oil_bucket": "Cubo de aceite de semillas",
+	"item.createaddition.seed_oil_bucket": "Cubeta de aceite de semillas",
 	"item.createaddition.seed_oil_bucket.tooltip": "CUBO_DE_ACEITE_DE_SEMILLAS",
 	"item.createaddition.seed_oil_bucket.tooltip.summary": "Un simple _líquido inflamable_.",
 	"fluid.createaddition.seed_oil": "Aceite de semillas",
 
-	"item.createaddition.bioethanol_bucket": "Cubo de biocombustible",
+	"item.createaddition.bioethanol_bucket": "Cubeta de biocombustible",
 	"item.createaddition.bioethanol_bucket.tooltip": "CUBO_DE_BIOETANOL",
 	"item.createaddition.bioethanol_bucket.tooltip.summary": "Un _líquido inflamable_ eficiente.",
 	"fluid.createaddition.bioethanol": "Biocombustible",
