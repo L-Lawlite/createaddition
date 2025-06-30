@@ -8,6 +8,7 @@ import com.mrh0.createaddition.blocks.tesla_coil.TeslaCoilBlock;
 import com.mrh0.createaddition.index.CABlocks;
 import com.mrh0.createaddition.index.CAFluids;
 import com.mrh0.createaddition.index.CAItems;
+import com.mrh0.createaddition.util.CALang;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.foundation.ponder.CreateSceneBuilder;
@@ -32,7 +33,7 @@ import net.minecraft.world.phys.Vec3;
 public class PonderScenes {
 	public static void electricMotor(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("electric_motor", "Generating Rotational Force using Electric Motors");
+		scene.title("electric_motor", CALang.translateDirect("ponder.electric_motor.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.world().showSection(util.select().layer(0), Direction.UP);
 
@@ -46,7 +47,7 @@ public class PonderScenes {
 		scene.idle(10);
 		scene.effects().rotationDirectionIndicator(motor);
 		scene.overlay().showText(50)
-			.text("Electric Motors are a compact and configurable source of Rotational Force")
+			.text(CALang.translateDirect("ponder.electric_motor.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(motor));
 		scene.idle(50);
@@ -67,7 +68,7 @@ public class PonderScenes {
 
 		scene.addKeyframe();
 		scene.overlay().showText(70)
-			.text("Scrolling on the back panel changes the RPM of the motors' rotational output")
+			.text(CALang.translateDirect("ponder.electric_motor.text_2").getString())
 			.placeNearTarget()
 			.pointAt(blockSurface);
 		scene.idle(10);
@@ -77,13 +78,13 @@ public class PonderScenes {
 
 		scene.addKeyframe();
 		scene.overlay().showText(70)
-		.text("The Electric Motor requires a source of energy (fe)")
+		.text(CALang.translateDirect("ponder.electric_motor.text_3").getString())
 		.placeNearTarget()
 		.pointAt(blockSurface);
 		scene.idle(80);
 
 		scene.overlay().showText(70)
-		.text("The motors' energy consumption is determined by the set RPM")
+		.text(CALang.translateDirect("ponder.electric_motor.text_4").getString())
 		.placeNearTarget()
 		.pointAt(blockSurface);
 		scene.idle(80);
@@ -95,7 +96,7 @@ public class PonderScenes {
 
 	public static void alternator(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("alternator", "Generating Electric energy using a Alternator");
+		scene.title("alternator", CALang.translateDirect("ponder.alternator.header").getString());
 		scene.configureBasePlate(1, 0, 4);
 		scene.world().showSection(util.select().layer(0), Direction.UP);
 
@@ -109,20 +110,20 @@ public class PonderScenes {
 
 		scene.idle(10);
 		scene.overlay().showText(50)
-			.text("The Alternator generates electric energy (fe) from rotational force")
+			.text(CALang.translateDirect("ponder.alternator.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(generator));
 		scene.idle(60);
 
 		scene.overlay().showText(50)
-			.text("It requires atleast 32 RPM to operate")
+			.text(CALang.translateDirect("ponder.alternator.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(generator));
 		scene.idle(60);
 
 
 		scene.overlay().showText(50)
-		.text("The Alternators energy production is determined by the input RPM")
+		.text(CALang.translateDirect("ponder.alternator.text_3").getString())
 		.placeNearTarget()
 		.pointAt(util.vector().topOf(generator));
 		scene.idle(60);
@@ -131,7 +132,7 @@ public class PonderScenes {
 
 	public static void rollingMill(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("rolling_mill", "Rolling metals into Rods and Wires");
+		scene.title("rolling_mill", CALang.translateDirect("ponder.rolling_mill.header").getString());
 		scene.configureBasePlate(1, 0, 4);
 		scene.world().showSection(util.select().layer(0), Direction.UP);
 
@@ -144,13 +145,13 @@ public class PonderScenes {
 
 		scene.idle(10);
 		scene.overlay().showText(50)
-			.text("The Rolling Mill uses rotational force to roll metals into Rods and Wires")
+			.text(CALang.translateDirect("ponder.rolling_mill.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(mill));
 		scene.idle(60);
 
 		scene.overlay().showText(50)
-			.text("To manualy input items, drop Ingots or Plates on the top of the Mill")
+			.text(CALang.translateDirect("ponder.rolling_mill.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(mill));
 		scene.idle(60);
@@ -158,7 +159,7 @@ public class PonderScenes {
 		scene.addKeyframe();
 		scene.overlay().showControls(util.vector().topOf(mill), Pointing.DOWN, 50).rightClick();
 		scene.overlay().showText(50)
-		.text("Manualy retrieve the rolled output by R-clicking the Mill")
+		.text(CALang.translateDirect("ponder.rolling_mill.text_3").getString())
 		.placeNearTarget()
 		.pointAt(util.vector().topOf(mill));
 		scene.idle(60);
@@ -167,7 +168,7 @@ public class PonderScenes {
 
 	public static void automateRollingMill(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("automated_rolling_mill", "Automating the Rolling Mill");
+		scene.title("automated_rolling_mill", CALang.translateDirect("ponder.automated_rolling_mill.header").getString());
 		scene.configureBasePlate(1, 0, 4);
 		scene.world().showSection(util.select().layer(0), Direction.UP);
 
@@ -195,7 +196,7 @@ public class PonderScenes {
 
 		scene.addKeyframe();
 		scene.overlay().showText(50)
-		.text("The Rolling Mill can be automated using a Belt and two Funnels")
+		.text(CALang.translateDirect("ponder.automated_rolling_mill.text_1").getString())
 		.placeNearTarget()
 		.pointAt(util.vector().topOf(mill));
 		scene.idle(60);
@@ -210,7 +211,7 @@ public class PonderScenes {
 
 	public static void ccMotor(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("cc_electric_motor", "Using Computercraft to control an Electric Motor");
+		scene.title("cc_electric_motor", CALang.translateDirect("ponder.cc_electric_motor.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.world().showSection(util.select().layer(0), Direction.UP);
 
@@ -224,14 +225,14 @@ public class PonderScenes {
 
 		scene.idle(10);
 		scene.overlay().showText(50)
-			.text("The Electric Motor can be controlled using Computercraft")
+			.text(CALang.translateDirect("ponder.cc_electric_motor.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(computer));
 		scene.idle(60);
 
 		scene.idle(10);
 		scene.overlay().showText(50)
-			.text("Connect to the motor using 'peripheral.wrap(side)'")
+			.text(CALang.translateDirect("ponder.cc_electric_motor.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(computer));
 		scene.idle(60);
@@ -239,7 +240,7 @@ public class PonderScenes {
 		scene.addKeyframe();
 		scene.idle(10);
 		scene.overlay().showText(150)
-			.text("Get to the API documentation by issuing the command '/cca_api' in the chat")
+			.text(CALang.translateDirect("ponder.cc_electric_motor.text_3").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(computer));
 		scene.idle(160);
@@ -248,7 +249,7 @@ public class PonderScenes {
 
 	public static void teslaCoil(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("tesla_coil", "Using Tesla Coil");
+		scene.title("tesla_coil", CALang.translateDirect("ponder.tesla_coil.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.showBasePlate();
 		scene.idle(5);
@@ -262,7 +263,7 @@ public class PonderScenes {
 		Vec3 topOf = util.vector().topOf(depotPos);
 		scene.overlay().showText(50)
 			.attachKeyFrame()
-			.text("Tesla Coil will charge Items below it")
+			.text(CALang.translateDirect("ponder.tesla_coil.text_1").getString())
 			.placeNearTarget()
 			.pointAt(topOf);
 		scene.idle(60);
@@ -272,7 +273,7 @@ public class PonderScenes {
 		scene.world().setBlock(util.grid().at(2, 3, 2), CABlocks.TESLA_COIL.getDefaultState().setValue(TeslaCoilBlock.FACING, Direction.UP).setValue(TeslaCoilBlock.POWERED, true), false);
 		scene.overlay().showText(70)
 			.attachKeyFrame()
-			.text("It will charge any Forge Energy Items and more!")
+			.text(CALang.translateDirect("ponder.tesla_coil.text_2").getString())
 			.placeNearTarget()
 			.pointAt(topOf);
 		scene.idle(80);
@@ -281,7 +282,7 @@ public class PonderScenes {
 
 	public static void teslaCoilHurt(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("tesla_coil_hurt", "Dangerous Tesla Coils");
+		scene.title("tesla_coil_hurt", CALang.translateDirect("ponder.tesla_coil_hurt.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.showBasePlate();
 		scene.idle(5);
@@ -293,7 +294,7 @@ public class PonderScenes {
 		scene.idle(5);
 		scene.overlay().showText(70)
 			.attachKeyFrame()
-			.text("The Tesla Coil is also able to Shock nearby Players and Mobs")
+			.text(CALang.translateDirect("ponder.tesla_coil_hurt.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(teslacoil));
 		scene.idle(80);
@@ -302,7 +303,7 @@ public class PonderScenes {
 		scene.idle(5);
 		scene.overlay().showText(50)
 			.attachKeyFrame()
-			.text("This can be activated with a Redstone signal")
+			.text(CALang.translateDirect("ponder.tesla_coil_hurt.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(lever));
 		scene.idle(60);
@@ -312,7 +313,7 @@ public class PonderScenes {
 		scene.idle(5);
 		scene.overlay().showText(70)
 			.attachKeyFrame()
-			.text("Prepare to be Shocked!")
+			.text(CALang.translateDirect("ponder.tesla_coil_hurt.text_3").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(teslacoil));
 		scene.idle(80);
@@ -321,7 +322,7 @@ public class PonderScenes {
 
 	public static void liquidBlazeBurner(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("liquid_blaze_burner", "Liquid Fuel Burning");
+		scene.title("liquid_blaze_burner", CALang.translateDirect("ponder.liquid_blaze_burner.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.showBasePlate();
 		scene.idle(5);
@@ -338,7 +339,7 @@ public class PonderScenes {
 		scene.idle(5);
 		scene.overlay().showText(50)
 		.attachKeyFrame()
-		.text("Giving the Blaze Burner a Straw")
+		.text(CALang.translateDirect("ponder.liquid_blaze_burner.text_1").getString())
 		.placeNearTarget()
 		.pointAt(util.vector().topOf(burner));
 		scene.idle(10);
@@ -349,7 +350,7 @@ public class PonderScenes {
 		scene.idle(60);
 		scene.overlay().showText(50)
 			.attachKeyFrame()
-			.text("will allow it to accept liquid fuels by Buckets,")
+			.text(CALang.translateDirect("ponder.liquid_blaze_burner.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(burner));
 		scene.idle(10);
@@ -358,7 +359,7 @@ public class PonderScenes {
 				.withItem(new ItemStack(CAFluids.BIOETHANOL.getBucket().get()));
 		scene.idle(60);
 		scene.overlay().showText(50)
-			.text("- or by pipes.")
+			.text(CALang.translateDirect("ponder.liquid_blaze_burner.text_3").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().topOf(burner));
 		scene.idle(10);
@@ -374,7 +375,7 @@ public class PonderScenes {
 
 	public static void modularAccumulator(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("modular_accumulator", "Accumulator");
+		scene.title("modular_accumulator", CALang.translateDirect("ponder.modular_accumulator.header").getString());
 		scene.configureBasePlate(0, 0, 4);
 		scene.showBasePlate();
 		scene.idle(15);
@@ -389,12 +390,12 @@ public class PonderScenes {
 		scene.overlay().showOutline(PonderPalette.GREEN, accumulatorLink, accumulator, 50);
 
 		scene.overlay().showText(50)
-			.text("The Accumulator is a multiblock")
+			.text(CALang.translateDirect("ponder.modular_accumulator.text_1").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(cIn));
 		scene.idle(60);
 		scene.overlay().showText(50)
-			.text("It can store large amounts of energy")
+			.text(CALang.translateDirect("ponder.modular_accumulator.text_2").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(cIn));
 		scene.idle(60);
@@ -408,7 +409,7 @@ public class PonderScenes {
 		scene.world().setBlock(cIn, CABlocks.SMALL_CONNECTOR.getDefaultState().setValue(AbstractConnectorBlock.FACING, Direction.DOWN).setValue(AbstractConnectorBlock.MODE, ConnectorMode.Push), false);
 		scene.overlay().showText(50)
 			.attachKeyFrame()
-			.text("Configure an input connector,")
+			.text(CALang.translateDirect("ponder.modular_accumulator.text_3").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(cIn));
 
@@ -418,13 +419,13 @@ public class PonderScenes {
 				.withItem(new ItemStack(AllItems.WRENCH.get()));
 		scene.world().setBlock(cOut, CABlocks.SMALL_CONNECTOR.getDefaultState().setValue(AbstractConnectorBlock.FACING, Direction.DOWN).setValue(AbstractConnectorBlock.MODE, ConnectorMode.Pull), false);
 		scene.overlay().showText(50)
-			.text("and an output connector.")
+			.text(CALang.translateDirect("ponder.modular_accumulator.text_4").getString())
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(cOut));
 		scene.idle(60);
 
 		scene.overlay().showText(110)
-		.text("Compat")
+		.text(CALang.translateDirect("ponder.modular_accumulator.text_5").getString())
 		.placeNearTarget()
 		.pointAt(util.vector().centerOf(cOut));
 		scene.idle(120);
@@ -433,7 +434,7 @@ public class PonderScenes {
 
 	public static void peiTransfer(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("pei_transfer", "Contraption Storage Exchange");
+		scene.title("pei_transfer", CALang.translateDirect("ponder.pei_transfer.header").getString());
 		scene.configureBasePlate(0, 0, 6);
 		scene.scaleSceneView(0.95f);
 		scene.setSceneOffsetY(-1);
@@ -454,7 +455,7 @@ public class PonderScenes {
 			.colored(PonderPalette.RED)
 			.placeNearTarget()
 			.attachKeyFrame()
-			.text("Inventories on moving contraptions cannot be accessed by players.");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_1").getString());
 
 		scene.idle(70);
 		BlockPos pei = util.grid().at(4, 2, 2);
@@ -467,7 +468,7 @@ public class PonderScenes {
 			.colored(PonderPalette.GREEN)
 			.placeNearTarget()
 			.attachKeyFrame()
-			.text("This component can interact with storage without the need to stop the contraption.");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_2").getString());
 		scene.idle(90);
 
 		BlockPos pei2 = pei.west(2);
@@ -476,7 +477,7 @@ public class PonderScenes {
 			.colored(PonderPalette.RED)
 			.placeNearTarget()
 			.attachKeyFrame()
-			.text("Place a second one with a gap of 1 or 2 blocks inbetween");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_3").getString());
 		scene.idle(55);
 
 		scene.world().rotateBearing(bearing, 360, 60);
@@ -486,7 +487,7 @@ public class PonderScenes {
 		scene.overlay().showText(40)
 			.placeNearTarget()
 			.pointAt(util.vector().of(3, 3, 2.5))
-			.text("Whenever they pass by each other, they will engage in a connection");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_4").getString());
 		scene.idle(35);
 
 		Selection both = util.select().fromTo(2, 2, 2, 4, 2, 2);
@@ -505,7 +506,7 @@ public class PonderScenes {
 			.placeNearTarget()
 			.colored(PonderPalette.GREEN)
 			.attachKeyFrame()
-			.text("While engaged, the stationary interface will represent ALL inventories on the contraption");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_5").getString());
 
 		scene.idle(80);
 
@@ -515,13 +516,13 @@ public class PonderScenes {
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(connector))
 			.attachKeyFrame()
-			.text("Items can now be inserted...");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_6").getString());
 		scene.idle(80);
 
 		scene.overlay().showText(120)
 			.placeNearTarget()
 			.pointAt(util.vector().centerOf(pei2))
-			.text("After no items have been exchanged for a while, the contraption will continue on its way");
+			.text(CALang.translateDirect("ponder.pei_transfer.text_7").getString());
 		scene.world().modifyBlockEntityNBT(both, peiClass, nbt -> nbt.putFloat("Timer", 9));
 
 		scene.idle(15);
@@ -532,7 +533,7 @@ public class PonderScenes {
 
 	public static void peiRedstone(SceneBuilder builder, SceneBuildingUtil util) {
 		CreateSceneBuilder scene = new CreateSceneBuilder(builder);
-		scene.title("pei_redstone", "Redstone Control");
+		scene.title("pei_redstone", CALang.translateDirect("ponder.pei_redstone.header").getString());
 		scene.configureBasePlate(0, 0, 5);
 		scene.setSceneOffsetY(-1);
 
@@ -566,7 +567,7 @@ public class PonderScenes {
 
 		scene.overlay().showOutlineWithText(util.select().position(1, 1, 3), 120)
 			.colored(PonderPalette.RED)
-			.text("Redstone power will prevent the stationary interface from engaging");
+			.text(CALang.translateDirect("ponder.pei_redstone.text_1").getString());
 
 		scene.idle(20);
 		scene.markAsFinished();
