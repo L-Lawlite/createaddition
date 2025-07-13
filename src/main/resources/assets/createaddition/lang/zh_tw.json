@@ -216,7 +216,7 @@
   "createaddition.ponder.tesla_coil_hurt.text_3": "準備被電擊！",
   "createaddition.ponder.liquid_blaze_burner.header": "液體燃料燃燒",
   "createaddition.ponder.liquid_blaze_burner.text_1": "給予烈焰使者動力爐一根吸管",
-  "createaddition.ponder.liquid_blaze_burner.text_2": "將使其接受桶裝的液體燃料",
+  "createaddition.ponder.liquid_blaze_burner.text_2": "將使其接受桶裝的液體燃料。",
   "createaddition.ponder.liquid_blaze_burner.text_3": "- 或者通過管道。",
   "createaddition.ponder.modular_accumulator.header": "多方塊蓄電池",
   "createaddition.ponder.modular_accumulator.text_1": "蓄電池是一個多方塊結構。",
