@@ -177,7 +177,7 @@
 	"block.createaddition.connector.tooltip.condition2": "Høyreklikking med en spole med ledning",
 	"block.createaddition.connector.tooltip.behaviour2": "Høyreklikk med en _gullspole_ eller _elektrumspole_ for å skape en _sammenkobling_ mellom opp til 4 kontakter.",
 	"block.createaddition.connector.tooltip.condition3": "Høyreklikk med en skiftenøkkel",
-	"block.createaddition.connector.tooltip.behaviour3": "For å veksle mellom modusene _dra_, dytt, og _ingen_.",
+	"block.createaddition.connector.tooltip.behaviour3": "For å veksle mellom modusene _dra_, _dytt_, og _ingen_.",
 
 	"block.createaddition.small_light_connector": "Liten kontakt med lys",
 	"block.createaddition.small_light_connector.tooltip": "KONTAKT MED LYS",
@@ -187,7 +187,7 @@
 	"block.createaddition.small_light_connector.tooltip.condition2": "Høyreklikking med en spole med ledning",
 	"block.createaddition.small_light_connector.tooltip.behaviour2": "Høyreklikk med en _gullspole_ eller _elektrumspole_ for å skape en _sammenkobling_ mellom opp til 4 kontakter.",
 	"block.createaddition.small_light_connector.tooltip.condition3": "høyreklikk med en skiftenøkkel",
-	"block.createaddition.small_light_connector.tooltip.behaviour3": "For å veksle mellom modusene _dra_, dytt, og _ingen_.",
+	"block.createaddition.small_light_connector.tooltip.behaviour3": "For å veksle mellom modusene _dra_, _dytt_, og _ingen_.",
 
 	"block.createaddition.large_connector": "Stor kontakt",
 	"block.createaddition.large_connector.tooltip": "KONTAKT",
@@ -197,7 +197,7 @@
 	"block.createaddition.large_connector.tooltip.condition2": "Høyreklikking med en spole med ledning",
 	"block.createaddition.large_connector.tooltip.behaviour2": "Høyreklikk med en _gullspole_ eller _elektrumspole_ for å skape en _sammenkobling_ mellom opp til 6 kontakter.",
 	"block.createaddition.large_connector.tooltip.condition3": "Høyreklikk med en skiftenøkkel",
-	"block.createaddition.large_connector.tooltip.behaviour3": "For å veklse mellom modusene _dra_, dytt, og _ingen_.",
+	"block.createaddition.large_connector.tooltip.behaviour3": "For å veklse mellom modusene _dra_, _dytt_, og _ingen_.",
 
 	"block.createaddition.redstone_relay": "Redstonerelé",
 	"block.createaddition.redstone_relay.tooltip": "REDSTONERELE",
